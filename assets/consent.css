@@ -1,0 +1,20 @@
+/* Cookie consent banner — shared by all pages */
+.cc { position: fixed; left: 50%; bottom: 18px; z-index: 90; width: min(760px, calc(100% - 24px)); transform: translate(-50%, 140%); opacity: 0; visibility: hidden; transition: transform .5s cubic-bezier(.2, .7, .1, 1), opacity .4s, visibility .4s; }
+.cc.is-open { transform: translate(-50%, 0); opacity: 1; visibility: visible; }
+.cc-in { padding: 22px 24px 20px; border-radius: 20px; background: rgba(10, 18, 22, .96); color: #E9F2F2; border: 1px solid rgba(233, 242, 242, .14); box-shadow: 0 30px 70px -30px rgba(0, 0, 0, .8); font-family: "Geist", system-ui, sans-serif; }
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) { .cc-in { background: rgba(10, 18, 22, .86); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); } }
+.cc-title { margin: 0 0 6px; font-size: 16px; font-weight: 600; }
+.cc-desc { margin: 0; font-size: 14px; line-height: 1.6; color: #B7C8CA; }
+.cc-desc a { color: #63C9C3; }
+.cc-prefs { margin: 16px 0 0; padding: 14px 0 0; border-top: 1px solid rgba(233, 242, 242, .1); }
+.cc-row { display: flex; gap: 12px; align-items: flex-start; padding: 8px 0; font-size: 14px; color: #B7C8CA; cursor: pointer; }
+.cc-row b { display: block; color: #E9F2F2; font-weight: 600; }
+.cc-row input { width: 18px; height: 18px; margin-top: 2px; accent-color: #63C9C3; flex: none; }
+.cc-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.cc-btn { flex: 1 1 0; min-width: 150px; min-height: 46px; padding: 0 18px; border-radius: 999px; border: 1px solid #63C9C3; background: #63C9C3; color: #062220; font: 600 14px/1 "Geist", system-ui, sans-serif; cursor: pointer; transition: background-color .25s, color .25s, border-color .25s; }
+.cc-btn:hover { background: #8FDCD6; border-color: #8FDCD6; }
+.cc-btn.cc-ghost { background: transparent; color: #E9F2F2; border-color: rgba(233, 242, 242, .3); }
+.cc-btn.cc-ghost:hover { border-color: #63C9C3; color: #63C9C3; }
+.cc-btn:focus-visible, .cc-row input:focus-visible { outline: 2px solid #63C9C3; outline-offset: 3px; }
+@media (max-width: 560px) { .cc { bottom: 10px; } .cc-btn { flex-basis: 100%; } }
+@media (prefers-reduced-motion: reduce) { .cc { transition: none; } }
