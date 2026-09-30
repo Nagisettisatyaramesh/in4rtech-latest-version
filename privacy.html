@@ -75,6 +75,11 @@
         <li>Your area of interest, subject and message.</li>
       </ul>
       <p>Please do not include special category data (for example, health information) in your message.</p>
+      <h3>Information you give us through the chat assistant</h3>
+      <ul>
+        <li>The questions you type into the chat assistant and the answers it gives.</li>
+      </ul>
+      <p>Please do not share personal or confidential information in the chat. If you would like us to contact you, please use the contact form.</p>
       <h3>Information collected automatically</h3>
       <ul>
         <li><strong>Technical data</strong> such as your IP address, browser type and the pages requested. Our hosting provider processes this to deliver the website securely and keep short-term server logs.</li>
@@ -86,6 +91,7 @@
         <thead><tr><th>Purpose</th><th>Data</th><th>Lawful basis (UK GDPR Art. 6)</th></tr></thead>
         <tbody>
           <tr><td>Responding to your enquiry and any follow-up conversation</td><td>Contact form details</td><td>Legitimate interests in responding to people who contact us; or steps prior to entering into a contract at your request</td></tr>
+          <tr><td>Answering questions through the chat assistant</td><td>Chat messages</td><td>Legitimate interests in helping visitors find information about our services</td></tr>
           <tr><td>Delivering and securing the website</td><td>Technical data</td><td>Legitimate interests in operating a secure, reliable website</td></tr>
           <tr><td>Understanding how the website is used, to improve it</td><td>Analytics data</td><td>Consent, which you can withdraw at any time</td></tr>
           <tr><td>Remembering your cookie choices</td><td>A record of your consent choice</td><td>Legal obligation (to respect and evidence your choice) and legitimate interests</td></tr>
@@ -99,7 +105,8 @@
       <ul>
         <li><strong>Website hosting</strong> — <span class="todo">Vercel Inc. (confirm hosting provider)</span>, which serves the website and processes technical data.</li>
         <li><strong>Email delivery</strong> — <span class="todo">Resend (confirm email provider)</span>, which delivers contact form messages to our inbox.</li>
-        <li><strong>Analytics</strong> — <span class="todo">Google Analytics 4 (Google Ireland Ltd / Google LLC) — confirm provider</span>, only if you consent.</li>
+        <li><strong>Chat assistant</strong> — <span class="todo">Vitality Soft (confirm provider and where chat data is stored)</span>, which runs the chat assistant and processes the messages you type into it.</li>
+        <li><strong>Analytics</strong> —<span class="todo">Google Analytics 4 (Google Ireland Ltd / Google LLC) — confirm provider</span>, only if you consent.</li>
         <li><strong>Website resources</strong> — fonts and code libraries are loaded from Google Fonts, jsDelivr and cdnjs (Cloudflare). When your browser requests these files, your IP address is shared with those providers so they can deliver them.</li>
       </ul>
       <p>We may also disclose information where required by law or to protect our legal rights.</p>
@@ -113,6 +120,7 @@
         <thead><tr><th>Name</th><th>Type</th><th>Purpose</th><th>Duration</th></tr></thead>
         <tbody>
           <tr><td>in4rtech-consent-v1 (browser storage)</td><td>Strictly necessary</td><td>Remembers whether you accepted or rejected non-essential cookies</td><td>Until you clear it or change your choice</td></tr>
+          <tr><td>aiwa_session_in4rtech (browser storage)</td><td>Strictly necessary</td><td>Keeps you signed in to the chat assistant, only if you sign in through it</td><td>Until you clear it</td></tr>
           <tr><td>_ga, _ga_*</td><td>Analytics (optional)</td><td>Distinguishes visitors and sessions so we can see how the site is used, in aggregate</td><td>Up to 2 years</td></tr>
         </tbody>
       </table>
@@ -123,6 +131,7 @@
       <h2 id="retention">7. How long we keep data</h2>
       <ul>
         <li><strong>Enquiries:</strong> kept for up to <span class="todo">[24 months]</span> after our last contact, unless they lead to a working relationship, in which case they are kept in line with our business records.</li>
+        <li><strong>Chat messages:</strong> kept by our chat provider for up to <span class="todo">[retention period]</span>.</li>
         <li><strong>Server logs:</strong> kept by our hosting provider for a short period for security and troubleshooting.</li>
         <li><strong>Analytics data:</strong> retained in aggregated form for up to <span class="todo">[14 months]</span> (the analytics provider’s retention setting).</li>
       </ul>
@@ -162,5 +171,7 @@
   </div>
 </footer>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<!-- Chat assistant (Vitality Soft) -->
+<script src="https://chatbot.vitalitysoft.com/widget.js" data-website-id="in4rtech" data-chat-endpoint="/api/chat-semantic" defer></script><script src="assets/chat-tweaks.js?v=2" defer></script>
 </body>
 </html>

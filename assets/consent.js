@@ -82,10 +82,12 @@
     prefs.hidden = !openPrefs; manageBtn.textContent = openPrefs ? 'Save choices' : 'Manage choices';
     lastFocus = document.activeElement;
     banner.classList.add('is-open');
+    document.documentElement.classList.add('cc-open');
     setTimeout(function () { (openPrefs ? analyticsBox : banner.querySelector('[data-cc="reject"]')).focus(); }, 50);
   }
   function hide() {
     banner.classList.remove('is-open');
+    document.documentElement.classList.remove('cc-open');
     if (lastFocus && lastFocus.focus) lastFocus.focus();
   }
   function decide(analytics) { save(analytics); apply({ analytics: analytics }); hide(); }
