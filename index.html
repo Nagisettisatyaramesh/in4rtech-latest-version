@@ -3,21 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>In4Rtech Solutions Ltd. | Enterprise Architecture, AI &amp; Automation Consultancy</title>
-<meta name="description" content="In4Rtech is a Manchester-based IT consultancy helping organisations with Enterprise Architecture, AI and Intelligent Automation, from understanding today's technology landscape to designing and delivering what comes next.">
+<title>In4rtech Solutions Ltd. | Enterprise Architecture, AI &amp; Automation Consultancy</title>
+<meta name="description" content="In4rtech is a Manchester-based IT consultancy helping organisations with Enterprise Architecture, AI and Intelligent Automation, from understanding today's technology landscape to designing and delivering what comes next.">
 <link rel="canonical" href="https://www.in4rtech.com/">
-<meta property="og:title" content="In4Rtech Solutions Ltd.">
+<meta property="og:title" content="In4rtech Solutions Ltd.">
 <meta property="og:description" content="Architect the enterprise. Then make it intelligent. Enterprise Architecture, AI and Automation consultancy, Manchester, UK.">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "name": "In4Rtech Solutions Ltd",
+  "name": "In4rtech Solutions Ltd",
   "url": "https://www.in4rtech.com/",
   "logo": "https://www.in4rtech.com/i4rimages/Logo.png",
   "description": "IT consultancy helping organisations with Enterprise Architecture, AI and Intelligent Automation.",
-  "telephone": "+44 7574519460",
-  "email": "rajneesh@in4rtech.com",
   "address": { "@type": "PostalAddress", "addressLocality": "Manchester", "addressCountry": "GB" },
   "founder": { "@type": "Person", "name": "Rajneesh Kumar", "jobTitle": "Founder & Managing Director" },
   "knowsAbout": ["Enterprise Architecture", "Artificial Intelligence", "Intelligent Automation", "Technology Strategy", "Digital Transformation", "Cloud & Platform Modernisation"]
@@ -31,6 +29,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/consent.css">
+<script src="assets/consent.js" defer></script>
 
 <style>
 /* ================= Tokens ================= */
@@ -609,6 +609,17 @@ section[id] { scroll-margin-top: 96px; }
   .stk i, .sph, .loop .ob { animation: none; }
 }
 
+/* ================= Client feedback updates ================= */
+.hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.form-status.is-ok { color: #9BE3C9; }
+.form-status.is-err { color: #F2B8A8; }
+.form-note a { color: var(--teal); }
+.btn[disabled] { opacity: .7; cursor: progress; }
+.people-art .portrait-mask { background: radial-gradient(80% 70% at 50% 35%, #13303A, #0A1216); }
+.people-art svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.footer-bottom a { color: inherit; }
+.footer-bottom a:hover { color: var(--teal); }
+
 /* ================= Reduced motion ================= */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -634,7 +645,7 @@ section[id] { scroll-margin-top: 96px; }
 <!-- Navbar -->
 <header class="nav" id="myNavbar">
   <nav class="nav-pill" aria-label="Main">
-    <a href="#home" class="nav-logo" aria-label="In4Rtech Solutions Ltd. — home">
+    <a href="#home" class="nav-logo" aria-label="In4rtech Solutions Ltd. — home">
       <img src="https://www.in4rtech.com/i4rimages/Logo.png" alt="In4rtech" width="107" height="85">
     </a>
     <ul class="nav-links">
@@ -642,6 +653,7 @@ section[id] { scroll-margin-top: 96px; }
       <li><a href="#services" data-nav><i class="fa fa-sitemap" aria-hidden="true"></i> SERVICES</a></li>
       <li><a href="#team" data-nav><i class="fa fa-user" aria-hidden="true"></i> PEOPLE</a></li>
       <li><a href="#work" data-nav><i class="fa fa-th" aria-hidden="true"></i> WORK</a></li>
+      <li><a href="insights.html"><i class="fa fa-file-text-o" aria-hidden="true"></i> INSIGHTS</a></li>
       <li><a href="#contact" data-nav><i class="fa fa-envelope" aria-hidden="true"></i> CONTACT</a></li>
       <li aria-hidden="true" class="nav-indicator"></li>
     </ul>
@@ -657,6 +669,7 @@ section[id] { scroll-margin-top: 96px; }
     <li style="--i:1"><a href="#services">SERVICES <i class="fa fa-sitemap" aria-hidden="true"></i></a></li>
     <li style="--i:1"><a href="#team">PEOPLE <i class="fa fa-user" aria-hidden="true"></i></a></li>
     <li style="--i:2"><a href="#work">WORK <i class="fa fa-th" aria-hidden="true"></i></a></li>
+    <li style="--i:3"><a href="insights.html">INSIGHTS <i class="fa fa-file-text-o" aria-hidden="true"></i></a></li>
     <li style="--i:3"><a href="#contact">CONTACT <i class="fa fa-envelope" aria-hidden="true"></i></a></li>
   </ul>
 </div>
@@ -691,7 +704,7 @@ section[id] { scroll-margin-top: 96px; }
 
     <div class="container hero-inner">
       <div class="hero-copy">
-        <h1 id="hero-title"><span class="line"><span class="brand">In4Rtech</span></span> <span class="line"><span>Solutions Ltd.</span></span></h1>
+        <h1 id="hero-title"><span class="line"><span class="brand">In4rtech</span></span> <span class="line"><span>Solutions Ltd.</span></span></h1>
         <p class="hero-sub">Architect the enterprise. Then make it intelligent.</p>
         <p class="hero-lead">An IT consultancy for Enterprise Architecture, AI and Automation. We help organisations make sense of complex technology landscapes: designing the architecture they need, then applying AI and automation where they deliver real business value.</p>
         <div class="hero-cta"><a href="#contact" class="btn btn-primary" data-magnetic>Discuss your technology landscape <span class="arrow" aria-hidden="true">→</span></a><a href="#services" class="btn btn-light">Explore our services</a></div>
@@ -711,7 +724,7 @@ section[id] { scroll-margin-top: 96px; }
         <div class="about-text">
           <p class="eyebrow" data-reveal>About</p>
           <h2 class="h-display" id="about-title" data-reveal style="--i:1">ABOUT THE COMPANY</h2>
-          <p data-reveal style="--i:2">In4Rtech Solutions Ltd is an IT consultancy based in Manchester, UK. We help organisations understand their technology landscape, define the architecture they need, and put <strong>AI</strong> and <strong>automation</strong> to work in ways that are practical, governed and aligned to business goals.</p>
+          <p data-reveal style="--i:2">In4rtech Solutions Ltd is an IT consultancy based in Manchester, UK. We help organisations understand their technology landscape, define the architecture they need, and put <strong>AI</strong> and <strong>automation</strong> to work in ways that are practical, governed and aligned to business goals.</p>
           <p data-reveal style="--i:3">We work with technology and business leaders who need a structured, objective view of their estate, whether that’s a focused <strong>Enterprise Architecture</strong> review or support across a longer transformation.</p>
         </div>
 
@@ -879,14 +892,25 @@ section[id] { scroll-margin-top: 96px; }
   <!-- People -->
   <section class="section section-white" id="team" aria-labelledby="team-title">
     <div class="container people-grid">
-      <figure class="portrait" style="margin:0">
+      <div class="portrait people-art" aria-hidden="true">
         <div class="portrait-mask">
-          <img src="https://www.in4rtech.com/i4rimages/RK1.jpg" alt="Rajneesh Kumar, Founder &amp; Managing Director" width="687" height="554" loading="lazy" data-parallax="0.06">
-          <figcaption class="portrait-tag">Founder &amp; Managing Director</figcaption>
+          <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <defs><linearGradient id="pa-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#63C9C3" stop-opacity=".55"/><stop offset="1" stop-color="#8CCB6B" stop-opacity=".35"/></linearGradient></defs>
+            <g stroke="#63C9C3" stroke-opacity=".12"><path d="M0 100H400M0 200H400M0 300H400M0 400H400M100 0V500M200 0V500M300 0V500"/></g>
+            <g fill="none" stroke="#63C9C3" stroke-width="1.5">
+              <path d="M200 380 L320 330 L200 280 L80 330 Z" stroke-opacity=".35" fill="rgba(99,201,195,.05)"/>
+              <path d="M200 320 L300 278 L200 236 L100 278 Z" stroke-opacity=".55" fill="rgba(99,201,195,.08)"/>
+              <path d="M200 260 L280 226 L200 192 L120 226 Z" stroke-opacity=".8" fill="url(#pa-g)"/>
+            </g>
+            <g stroke="#63C9C3" stroke-opacity=".5" stroke-dasharray="3 5"><path d="M140 300 V252 M260 300 V252 M200 236 V192"/></g>
+            <circle cx="200" cy="150" r="30" fill="none" stroke="#63C9C3" stroke-opacity=".7"/><circle cx="200" cy="150" r="12" fill="#8CCB6B"/>
+            <path d="M200 162 V192" stroke="#63C9C3" stroke-opacity=".6"/>
+          </svg>
+          <span class="portrait-tag">Enterprise Architecture · AI · Automation</span>
         </div>
-        <span class="corner c1" aria-hidden="true"></span>
-        <span class="corner c2" aria-hidden="true"></span>
-      </figure>
+        <span class="corner c1"></span>
+        <span class="corner c2"></span>
+      </div>
       <div>
         <p class="eyebrow" data-reveal>People</p>
         <h2 class="h-display" id="team-title" data-reveal style="--i:1">THE PEOPLE</h2>
@@ -976,8 +1000,8 @@ section[id] { scroll-margin-top: 96px; }
       <div class="contact-grid">
         <ul class="contact-list" data-reveal style="--i:2">
           <li><span class="ico"><i class="fa fa-map-marker fa-fw" aria-hidden="true"></i></span><span>Manchester, UK</span></li>
-          <li><span class="ico"><i class="fa fa-phone fa-fw" aria-hidden="true"></i></span><span>Phone: <a href="tel:+447574519460">+44 7574519460</a></span></li>
-          <li><span class="ico"><i class="fa fa-envelope fa-fw" aria-hidden="true"></i></span><span>Email: <a href="mailto:rajneesh@in4rtech.com">rajneesh@in4rtech.com</a></span></li>
+          <li><span class="ico"><i class="fa fa-paper-plane fa-fw" aria-hidden="true"></i></span><span>Send an enquiry using the form and it comes straight to our team.</span></li>
+          <li><span class="ico"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i></span><span>We’ll reply to the email address you provide.</span></li>
         </ul>
         <form class="glass form" id="contact-form" data-reveal style="--i:3" novalidate>
           <div class="field"><label for="f-name">Name</label><input id="f-name" type="text" placeholder="Name" required name="Name" autocomplete="name"></div>
@@ -986,11 +1010,12 @@ section[id] { scroll-margin-top: 96px; }
           <div class="field"><label for="f-area">Area of interest</label><select id="f-area" name="Area"><option>Enterprise Architecture</option><option>AI Consulting</option><option>Intelligent Automation</option><option>Technology Strategy</option><option>Digital Transformation</option><option>Cloud &amp; Platform Modernisation</option><option selected>Not sure yet</option></select></div>
           <div class="field full"><label for="f-subject">Subject</label><input id="f-subject" type="text" placeholder="Subject" required name="Subject"></div>
           <div class="field full"><label for="f-message">Message</label><textarea id="f-message" placeholder="Message" required name="Message"></textarea></div>
+          <div class="hp-field" aria-hidden="true"><label for="f-website">Leave this field empty</label><input id="f-website" type="text" name="Website" tabindex="-1" autocomplete="off"></div>
           <div class="full form-actions">
-            <button class="btn btn-primary" type="submit" data-magnetic><i class="fa fa-paper-plane" aria-hidden="true"></i> SEND MESSAGE <span class="arrow" aria-hidden="true">→</span></button>
-            <p class="form-note">Opens your email app, addressed to rajneesh@in4rtech.com.</p>
+            <button class="btn btn-primary" type="submit" id="f-submit" data-magnetic><i class="fa fa-paper-plane" aria-hidden="true"></i> <span class="btn-label">SEND MESSAGE</span> <span class="arrow" aria-hidden="true">→</span></button>
+            <p class="form-note">Your enquiry is sent directly to our team. We use your details only to reply. See our <a href="privacy.html">Privacy Policy</a>.</p>
           </div>
-          <p class="full form-status" id="form-status" role="alert"></p>
+          <p class="full form-status" id="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
       <div class="map-frame" data-reveal>
@@ -1006,7 +1031,7 @@ section[id] { scroll-margin-top: 96px; }
   <div class="container">
     <div class="footer-top">
       <div>
-        <a href="#home" class="footer-logo" aria-label="In4Rtech Solutions Ltd. — back to top"><img src="https://www.in4rtech.com/i4rimages/Logo.png" alt="In4rtech" width="107" height="85" loading="lazy"></a>
+        <a href="#home" class="footer-logo" aria-label="In4rtech Solutions Ltd. — back to top"><img src="https://www.in4rtech.com/i4rimages/Logo.png" alt="In4rtech" width="107" height="85" loading="lazy"></a>
         <p class="footer-tag">Enterprise Architecture, AI and Automation consultancy. Manchester, UK.</p>
       </div>
       <div>
@@ -1017,6 +1042,7 @@ section[id] { scroll-margin-top: 96px; }
           <li><a href="#approach">APPROACH</a></li>
           <li><a href="#team">PEOPLE</a></li>
           <li><a href="#work">WORK</a></li>
+          <li><a href="insights.html">INSIGHTS</a></li>
           <li><a href="#contact">CONTACT</a></li>
         </ul>
       </div>
@@ -1024,13 +1050,14 @@ section[id] { scroll-margin-top: 96px; }
         <h4>Contact</h4>
         <ul>
           <li><i class="fa fa-map-marker" aria-hidden="true"></i> Manchester, UK</li>
-          <li><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:+447574519460">+44 7574519460</a></li>
-          <li><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:rajneesh@in4rtech.com">rajneesh@in4rtech.com</a></li>
+          <li><i class="fa fa-paper-plane" aria-hidden="true"></i> <a href="#contact">Send an enquiry</a></li>
+          <li><i class="fa fa-shield" aria-hidden="true"></i> <a href="privacy.html">Privacy Policy</a></li>
+          <li><i class="fa fa-sliders" aria-hidden="true"></i> <a href="#" data-cookie-settings>Cookie settings</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span id="year">2026</span> In4Rtech Solutions Ltd.</span>
+      <span>© <span id="year">2026</span> In4rtech Solutions Ltd. · <a href="privacy.html" style="text-decoration:none">Privacy Policy</a></span>
       <a href="#home" class="btn btn-light" data-magnetic><i class="fa fa-arrow-up" aria-hidden="true"></i> To the top</a>
     </div>
   </div>
@@ -1057,6 +1084,7 @@ section[id] { scroll-margin-top: 96px; }
     const a = e.target.closest('a[href^="#"]');
     if (!a) return;
     const id = a.getAttribute('href');
+    if (id.length < 2 || a.hasAttribute('data-cookie-settings')) return;
     const target = document.querySelector(id);
     if (!target) return;
     e.preventDefault();
@@ -1209,18 +1237,36 @@ section[id] { scroll-margin-top: 96px; }
     size();
   })();
 
-  /* ---------- Contact form: compose an email ---------- */
-  document.getElementById('contact-form').addEventListener('submit', function (e) {
+  /* ---------- Contact form: sent directly by the server (/api/contact); no address in the page ---------- */
+  document.getElementById('contact-form').addEventListener('submit', async function (e) {
     e.preventDefault();
     const status = document.getElementById('form-status');
+    const btn = document.getElementById('f-submit'), label = btn.querySelector('.btn-label');
     const f = this;
+    status.className = 'full form-status';
     const missing = ['Name', 'Email', 'Subject', 'Message'].filter((n) => !f[n].value.trim());
     if (missing.length) { status.textContent = 'Please fill in: ' + missing.join(', ') + '.'; f[missing[0]].focus(); return; }
     if (!/^\S+@\S+\.\S+$/.test(f.Email.value.trim())) { status.textContent = 'Please enter a valid email address.'; f.Email.focus(); return; }
-    status.textContent = '';
-    const org = f.Organisation.value.trim(), area = f.Area.value;
-    const body = f.Message.value.trim() + '\n\n' + f.Name.value.trim() + (org ? '\n' + org : '') + '\n' + f.Email.value.trim() + '\nArea of interest: ' + area;
-    location.href = 'mailto:rajneesh@in4rtech.com?subject=' + encodeURIComponent('[' + area + '] ' + f.Subject.value.trim()) + '&body=' + encodeURIComponent(body);
+    const payload = {
+      name: f.Name.value.trim(), email: f.Email.value.trim(), organisation: f.Organisation.value.trim(),
+      area: f.Area.value, subject: f.Subject.value.trim(), message: f.Message.value.trim(), website: f.Website.value
+    };
+    btn.disabled = true; label.textContent = 'SENDING…'; status.textContent = '';
+    try {
+      const res = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      f.reset();
+      status.classList.add('is-ok');
+      status.textContent = 'Thank you, your enquiry has been sent. We’ll be in touch shortly.';
+      label.textContent = 'SENT';
+    } catch (err) {
+      status.classList.add('is-err');
+      status.textContent = 'Sorry, your enquiry could not be sent just now. Please try again in a few minutes.';
+      label.textContent = 'SEND MESSAGE';
+    } finally {
+      btn.disabled = false;
+      setTimeout(() => { if (label.textContent === 'SENT') label.textContent = 'SEND MESSAGE'; }, 4000);
+    }
   });
 
   /* Service links pre-select the enquiry's area of interest */
@@ -1240,8 +1286,8 @@ const TEAL = new THREE.Color('#63C9C3'), GREEN = new THREE.Color('#8CCB6B'), BLU
 
 function makeRenderer(canvas) {
   try {
-    const r = new THREE.WebGLRenderer({ canvas, antialias: !small, alpha: true, powerPreference: 'high-performance' });
-    r.setPixelRatio(Math.min(devicePixelRatio, small ? 1.25 : 1.75));
+    const r = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: 'high-performance' });
+    r.setPixelRatio(Math.min(devicePixelRatio, small ? 1.5 : 2));
     return r;
   } catch (e) { return null; }
 }
@@ -1290,117 +1336,112 @@ function initHero() {
   const renderer = makeRenderer(canvas);
   if (!renderer) { hero.classList.add('no-webgl'); return; }
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.05;
   const PR = renderer.getPixelRatio();
 
   const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(30, 1, 0.1, 100);
-  const target = new THREE.Vector3(0, 1.3, 0);
-
-  scene.add(new THREE.HemisphereLight(0xd6f2f0, 0x0a1216, 1.1));
-  const key = new THREE.DirectionalLight(0xffffff, 1.6); key.position.set(5, 9, 4); scene.add(key);
-  const rim = new THREE.PointLight(0x63c9c3, 14, 14); rim.position.set(-2.5, 3.5, -2); scene.add(rim);
+  scene.fog = new THREE.Fog(0x0a1216, 16, 30);
+  const camera = new THREE.PerspectiveCamera(28, 1, 0.1, 100);
+  const target = new THREE.Vector3(0, 1.55, 0);
+  scene.add(new THREE.HemisphereLight(0xdff6f3, 0x0a1216, 1.0));
+  const key = new THREE.DirectionalLight(0xffffff, 1.2); key.position.set(4, 10, 6); scene.add(key);
+  const rim = new THREE.PointLight(0x63c9c3, 9, 16); rim.position.set(-3, 4.5, -3); scene.add(rim);
 
   const root = new THREE.Group(); scene.add(root);
   const glowTex = glowTexture();
+  const H = 0.06, GAP = 1.02;
+  const SIZES = [4.4, 3.8, 3.2, 2.6];
   const layers = [];
 
-  function track(group) {
+  const plateMat = (tint, op) => new THREE.MeshPhysicalMaterial({ color: tint, roughness: 0.12, metalness: 0.08, clearcoat: 1, clearcoatRoughness: 0.12, transparent: true, opacity: op, depthWrite: false });
+  const lineMat = (op, color = TEAL) => new THREE.LineBasicMaterial({ color, transparent: true, opacity: op, depthWrite: false });
+  const rrect = (size, r, y, seg = 10) => {
+    const h = size / 2, pts = [];
+    [[h - r, h - r, 0], [-h + r, h - r, Math.PI / 2], [-h + r, -h + r, Math.PI], [h - r, -h + r, Math.PI * 1.5]].forEach(([cx, cz, a0]) => {
+      for (let i = 0; i <= seg; i++) { const a = a0 + (i / seg) * Math.PI / 2; pts.push(new THREE.Vector3(cx + Math.cos(a) * r, y, cz + Math.sin(a) * r)); }
+    });
+    return new THREE.BufferGeometry().setFromPoints(pts);
+  };
+  const circle = (r, y, seg = 128) => new THREE.BufferGeometry().setFromPoints(Array.from({ length: seg }, (_, i) => { const a = (i / seg) * Math.PI * 2; return new THREE.Vector3(Math.cos(a) * r, y, Math.sin(a) * r); }));
+
+  function plate(size, tint) {
+    const g = new THREE.Group();
+    g.add(new THREE.Mesh(new RoundedBoxGeometry(size, H, size, 4, 0.16), plateMat(tint, 0.14)));
+    g.add(new THREE.LineLoop(rrect(size, 0.16, H / 2 + 0.002), lineMat(0.9)));
+    g.add(new THREE.LineLoop(rrect(size - 0.36, 0.1, H / 2 + 0.002), lineMat(0.16)));
+    const glow = new THREE.Mesh(new THREE.PlaneGeometry(size * 1.8, size * 1.8), new THREE.MeshBasicMaterial({ map: glowTex, transparent: true, opacity: 0.32, depthWrite: false, blending: THREE.AdditiveBlending }));
+    glow.rotation.x = -Math.PI / 2; glow.position.y = -H;
+    g.add(glow);
+    return g;
+  }
+  function addLayer(group, i) {
+    root.add(group);
     const mats = [];
     group.traverse((o) => { if (o.material) { o.material.transparent = true; mats.push([o.material, o.material.opacity]); } });
-    return mats;
-  }
-  function glass(color, opacity) {
-    return new THREE.MeshPhysicalMaterial({ color, roughness: 0.18, metalness: 0.05, clearcoat: 1, clearcoatRoughness: 0.25, transparent: true, opacity, depthWrite: false });
-  }
-  function edges(geo, opacity, color = TEAL) {
-    return new THREE.LineSegments(new THREE.EdgesGeometry(geo, 25), new THREE.LineBasicMaterial({ color, transparent: true, opacity }));
-  }
-  function plate(size, h, tint) {
-    const g = new RoundedBoxGeometry(size, h, size, 3, 0.12);
-    const m = new THREE.Mesh(g, glass(tint, 0.2));
-    m.add(edges(g, 0.6));
-    const glow = new THREE.Mesh(new THREE.PlaneGeometry(size * 1.7, size * 1.7), new THREE.MeshBasicMaterial({ map: glowTex, transparent: true, opacity: 0.55, depthWrite: false, blending: THREE.AdditiveBlending }));
-    glow.rotation.x = -Math.PI / 2; glow.position.y = -h / 2 - 0.02;
-    m.add(glow);
-    return m;
-  }
-  function addLayer(group, size, anchorY) {
-    root.add(group);
-    layers.push({ group, size, anchorY, mats: track(group) });
+    layers.push({ group, size: SIZES[i], mats });
   }
 
-  // Business: the foundation plate with a fine grid
+  // 0 · Business — foundation plate with a precise fine grid
   {
-    const g = new THREE.Group();
-    g.add(plate(4.6, 0.16, 0xcfe9e0));
-    const grid = new THREE.GridHelper(4.2, 12, 0x63c9c3, 0x63c9c3);
-    grid.material.transparent = true; grid.material.opacity = 0.18; grid.position.y = 0.085;
-    g.add(grid);
-    addLayer(g, 4.6, 0);
+    const g = plate(SIZES[0], 0xcfe9e0), s = SIZES[0] - 0.7, pts = [], y = H / 2 + 0.003;
+    for (let k = -s / 2; k <= s / 2 + 0.001; k += s / 10) { pts.push(new THREE.Vector3(k, y, -s / 2), new THREE.Vector3(k, y, s / 2), new THREE.Vector3(-s / 2, y, k), new THREE.Vector3(s / 2, y, k)); }
+    g.add(new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints(pts), lineMat(0.1)));
+    addLayer(g, 0);
   }
-  // Data + applications
+  // 1 · Data & applications — a flush 3×3 array of tiles
   {
-    const g = new THREE.Group();
-    g.add(plate(3.8, 0.14, 0xd8efec));
-    for (let i = 0; i < 3; i++) {
-      const cg = new THREE.CylinderGeometry(0.44, 0.44, 0.14, 40);
-      const c = new THREE.Mesh(cg, glass(0xbfe8e4, 0.5)); c.position.set(-0.9, 0.17 + i * 0.19, 0.1);
-      c.add(edges(cg, 0.5)); g.add(c);
+    const g = plate(SIZES[1], 0xd8efec), tileGeo = new RoundedBoxGeometry(0.66, 0.05, 0.66, 2, 0.08);
+    for (let r = -1; r <= 1; r++) for (let c = -1; c <= 1; c++) {
+      const hot = r === 0 && c === 0, accent = r === -1 && c === 1;
+      const mat = hot ? new THREE.MeshStandardMaterial({ color: 0x8ccb6b, emissive: 0x8ccb6b, emissiveIntensity: 0.35, roughness: 0.35, transparent: true, opacity: 0.95 })
+        : accent ? new THREE.MeshStandardMaterial({ color: 0x63c9c3, emissive: 0x63c9c3, emissiveIntensity: 0.3, roughness: 0.35, transparent: true, opacity: 0.9 })
+        : plateMat(0xbfe8e4, 0.32);
+      const t = new THREE.Mesh(tileGeo, mat); t.position.set(c * 0.92, H / 2 + 0.03, r * 0.92); g.add(t);
+      const o = new THREE.LineLoop(rrect(0.66, 0.08, 0.026), lineMat(hot || accent ? 0 : 0.45)); o.position.copy(t.position); g.add(o);
     }
-    [[0.55, -0.35], [1.15, -0.35], [0.55, 0.3], [1.15, 0.3]].forEach(([x, z], i) => {
-      const bg = new RoundedBoxGeometry(0.46, 0.14 + (i % 2) * 0.1, 0.46, 2, 0.05);
-      const b = new THREE.Mesh(bg, new THREE.MeshStandardMaterial({ color: i === 3 ? 0x8ccb6b : 0x63c9c3, roughness: 0.4, transparent: true, opacity: 0.85 }));
-      b.position.set(x, 0.14 + (0.14 + (i % 2) * 0.1) / 2, z); g.add(b);
-    });
-    addLayer(g, 3.8, 1);
+    addLayer(g, 1);
   }
-  // Architecture: a node graph on a thinner plate
+  // 2 · Architecture — node graph
   {
-    const g = new THREE.Group();
-    g.add(plate(3.1, 0.12, 0xe2f4f2));
-    const pts = [[0, 0], [1.0, -0.6], [0.9, 0.75], [-0.4, 1.05], [-1.1, 0.1], [-0.5, -0.95]].map(([x, z]) => new THREE.Vector3(x, 0.14, z));
-    const nodeGeo = new THREE.SphereGeometry(0.075, 20, 20);
-    pts.forEach((p, i) => { const n = new THREE.Mesh(nodeGeo, new THREE.MeshStandardMaterial({ color: i === 0 ? 0x8ccb6b : 0x63c9c3, emissive: i === 0 ? 0x8ccb6b : 0x63c9c3, emissiveIntensity: 0.6, transparent: true, opacity: 1 })); n.position.copy(p); if (i === 0) n.scale.setScalar(1.6); g.add(n); });
-    const seg = [];
-    for (let i = 1; i < pts.length; i++) { seg.push(pts[0], pts[i], pts[i], pts[i === pts.length - 1 ? 1 : i + 1]); }
-    g.add(new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints(seg), new THREE.LineBasicMaterial({ color: TEAL, transparent: true, opacity: 0.7 })));
-    addLayer(g, 3.1, 2);
+    const g = plate(SIZES[2], 0xe2f4f2), y = H / 2 + 0.05;
+    const pts = [[0, 0], [0.95, -0.55], [0.85, 0.7], [-0.35, 1.0], [-1.05, 0.1], [-0.45, -0.95]].map(([x, z]) => new THREE.Vector3(x, y, z));
+    const nodeGeo = new THREE.SphereGeometry(0.06, 20, 20);
+    pts.forEach((p, i) => { const n = new THREE.Mesh(nodeGeo, new THREE.MeshStandardMaterial({ color: i === 0 ? 0x8ccb6b : 0x63c9c3, emissive: i === 0 ? 0x8ccb6b : 0x63c9c3, emissiveIntensity: 0.8, transparent: true, opacity: 1 })); n.position.copy(p); if (i === 0) n.scale.setScalar(1.7); g.add(n); });
+    const seg = []; for (let i = 1; i < pts.length; i++) seg.push(pts[0], pts[i], pts[i], pts[i === pts.length - 1 ? 1 : i + 1]);
+    g.add(new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints(seg), lineMat(0.6)));
+    addLayer(g, 2);
   }
-  // Cloud: soft glass cluster above a halo ring
+  // 3 · Cloud — concentric orbital rings around a faceted core (no blobs)
   {
-    const g = new THREE.Group();
-    const cloudMat = glass(0xf2fbfa, 0.3);
-    cloudMat.emissive = new THREE.Color(0x63c9c3); cloudMat.emissiveIntensity = 0.22;
-    [[0, 0.35, 0, 0.55], [-0.55, 0.2, 0.1, 0.4], [0.55, 0.2, -0.05, 0.42], [0.2, 0.62, 0.15, 0.36], [-0.25, 0.55, -0.2, 0.33], [0.05, 0.15, 0.4, 0.34]]
-      .forEach(([x, y, z, r]) => { const s = new THREE.Mesh(new THREE.SphereGeometry(r, 32, 32), cloudMat); s.position.set(x, y, z); g.add(s); });
-    const ring = new THREE.Mesh(new THREE.TorusGeometry(1.35, 0.008, 8, 120), new THREE.MeshBasicMaterial({ color: TEAL, transparent: true, opacity: 0.6 }));
-    ring.rotation.x = Math.PI / 2; g.add(ring);
-    const sats = [0, 2.1, 4.2].map(() => { const s = new THREE.Mesh(new THREE.SphereGeometry(0.045, 12, 12), new THREE.MeshBasicMaterial({ color: GREEN, transparent: true, opacity: 1 })); g.add(s); return s; });
-    g.userData.sats = sats;
-    addLayer(g, 2.7, 3);
+    const g = plate(SIZES[3], 0xeefaf8), y = H / 2 + 0.004;
+    const rings = [0.5, 0.8, 1.08].map((r, i) => { const l = new THREE.LineLoop(circle(r, y + 0.02 * i), lineMat([0.75, 0.45, 0.25][i], i === 1 ? GREEN : TEAL)); g.add(l); return l; });
+    const core = new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.IcosahedronGeometry(0.26, 1), 1), lineMat(0.9));
+    core.position.y = 0.42; g.add(core);
+    const coreFill = new THREE.Mesh(new THREE.IcosahedronGeometry(0.25, 1), plateMat(0xdff3f0, 0.3)); coreFill.position.y = 0.42; g.add(coreFill);
+    const sats = [0, 1, 2].map((i) => { const s = new THREE.Mesh(new THREE.SphereGeometry(0.04, 12, 12), new THREE.MeshBasicMaterial({ color: i === 1 ? GREEN : 0xd9fbf6, transparent: true, opacity: 1 })); g.add(s); return s; });
+    g.userData = { rings, core, coreFill, sats };
+    addLayer(g, 3);
   }
 
-  // Vertical links between layers + data pulses
-  const COLS = [[-1.1, -1.1], [1.1, -1.1], [-1.1, 1.1], [1.1, 1.1], [0, 0]];
+  // Vertical links (solid, fine) + data pulses travelling up them
+  const COLS = [[-1, -1], [1, -1], [-1, 1], [1, 1], [0, 0]];
   const linkPos = new Float32Array(COLS.length * 3 * 6);
   const linkGeo = new THREE.BufferGeometry(); linkGeo.setAttribute('position', new THREE.BufferAttribute(linkPos, 3));
-  const linkMat = new THREE.LineDashedMaterial({ color: TEAL, dashSize: 0.08, gapSize: 0.07, transparent: true, opacity: 0 });
-  const links = new THREE.LineSegments(linkGeo, linkMat); root.add(links);
-
-  const P = small ? 10 : 22;
-  const pulseGeo = pointsGeometry(P, () => small ? 9 : 10, (i) => (i % 3 === 0 ? GREEN : new THREE.Color(0xd9fbf6)));
-  const pulses = Array.from({ length: P }, () => ({ col: Math.floor(Math.random() * COLS.length), t: Math.random(), v: 0.18 + Math.random() * 0.25 }));
+  const linkMat = lineMat(0);
+  root.add(new THREE.LineSegments(linkGeo, linkMat));
+  const P = small ? 8 : 16;
+  const pulseGeo = pointsGeometry(P, () => (small ? 8 : 9), (i) => (i % 4 === 0 ? GREEN : new THREE.Color(0xd9fbf6)));
+  const pulses = Array.from({ length: P }, () => ({ col: Math.floor(Math.random() * COLS.length), t: Math.random(), v: 0.14 + Math.random() * 0.12 }));
   const pulseMat = pointsMaterial(PR, 0);
   root.add(new THREE.Points(pulseGeo, pulseMat));
 
-  // Ambient particles (sparse)
-  const A = small ? 50 : 120;
-  const dustGeo = pointsGeometry(A, () => 2 + Math.random() * 2.5, () => (Math.random() < 0.5 ? TEAL : BLUE));
-  const dust = Array.from({ length: A }, () => ({ x: (Math.random() - .5) * 11, y: Math.random() * 7 - 1.5, z: (Math.random() - .5) * 11, v: 0.05 + Math.random() * 0.1 }));
-  const dustMat = pointsMaterial(PR, 0.55);
+  // Ambient particles (very sparse)
+  const A = small ? 30 : 60;
+  const dustGeo = pointsGeometry(A, () => 1.6 + Math.random() * 1.6, () => (Math.random() < 0.6 ? TEAL : BLUE));
+  const dust = Array.from({ length: A }, () => ({ x: (Math.random() - .5) * 11, y: Math.random() * 7 - 1.5, z: (Math.random() - .5) * 11, v: 0.03 + Math.random() * 0.06 }));
+  const dustMat = pointsMaterial(PR, 0.35);
   scene.add(new THREE.Points(dustGeo, dustMat));
 
-  // Layer labels (HTML, projected from 3D)
   const labels = [...document.querySelectorAll('.arch-label')].map((el) => ({ el, layer: +el.dataset.layer }));
   const tmp = new THREE.Vector3();
 
@@ -1409,57 +1450,57 @@ function initHero() {
     if (!w || !h) return;
     renderer.setSize(w, h, false);
     camera.aspect = w / h;
-    const d = camera.aspect < 0.95 ? 18.5 : 17;
-    camera.position.set(d * 0.6, d * 0.48, d * 0.64);
+    const d = camera.aspect < 0.95 ? 20 : 18.5;
+    camera.position.set(d * 0.62, d * 0.42, d * 0.66);
     camera.lookAt(target);
     camera.updateProjectionMatrix();
-    if (reduce) frame(0, 0);
+    if (reduce) frame(0);
   }
   addEventListener('resize', resize);
 
   let sx = 0, sy = 0;
-  const ease = (x) => 1 - Math.pow(1 - x, 3);
+  const ease = (x) => { x = Math.min(1, Math.max(0, x)); return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; };
   const introStart = performance.now();
 
   function frame(t) {
-    const intro = reduce ? 1 : Math.min(1, (performance.now() - introStart) / 2200);
+    const intro = reduce ? 1 : Math.min(1, (performance.now() - introStart) / 2600);
     const p = Math.min(1, Math.max(0, scrollY / (hero.offsetHeight || 1)));
-    sx += (mx - sx) * 0.04; sy += (my - sy) * 0.04;
+    sx += (mx - sx) * 0.035; sy += (my - sy) * 0.035;
 
-    const gap = 1.08 + p * 0.55;
-    root.rotation.y = -0.18 + sx * 0.22 + Math.sin(t * 0.18) * 0.08 + p * 0.3;
-    root.rotation.x = sy * 0.06;
-    root.position.y = p * 0.9;
+    const gap = GAP + p * 0.4;
+    root.rotation.y = -0.35 + (reduce ? 0 : t * 0.05) + sx * 0.22;
+    root.rotation.x = sy * 0.05;
+    root.position.y = (reduce ? 0 : Math.sin(t * 0.5) * 0.05) + p * 0.8;
 
     layers.forEach((L, i) => {
-      const k = ease(Math.min(1, Math.max(0, (intro - i * 0.14) / 0.55)));
-      const bob = reduce ? 0 : Math.sin(t * 0.8 + i * 1.3) * 0.035;
-      L.group.position.y = i * gap + (i === 3 ? 0.35 : 0) + bob + (1 - k) * 2.2;
+      const k = ease((intro - i * 0.12) / 0.55);
+      L.group.position.y = i * gap + (1 - k) * -0.7;
       L.mats.forEach(([m, base]) => { m.opacity = base * k; });
     });
-    const sats = layers[3].group.userData.sats;
-    sats.forEach((s, i) => { const a = t * 0.35 + i * 2.1; s.position.set(Math.cos(a) * 1.35, 0, Math.sin(a) * 1.35); });
+    const ud = layers[3].group.userData;
+    ud.rings.forEach((r, i) => { r.rotation.y = (i % 2 ? -1 : 1) * t * (0.08 + i * 0.04); });
+    ud.core.rotation.y = t * 0.25; ud.core.rotation.x = t * 0.1; ud.coreFill.rotation.copy(ud.core.rotation);
+    ud.sats.forEach((s, i) => { const a = t * (0.35 + i * 0.08) + i * 2.1, r = [0.5, 0.8, 1.08][i]; s.position.set(Math.cos(a) * r, H / 2 + 0.02 * i, Math.sin(a) * r); });
 
-    // links follow the current layer spacing
     let o = 0;
-    COLS.forEach(([x, z]) => {
+    COLS.forEach(([cx, cz]) => {
       for (let i = 0; i < 3; i++) {
-        const y0 = layers[i].group.position.y + 0.1, y1 = layers[i + 1].group.position.y - (i === 2 ? 0.1 : 0.08);
-        linkPos.set([x * (1 - i * 0.12), y0, z * (1 - i * 0.12), x * (1 - (i + 1) * 0.12), y1, z * (1 - (i + 1) * 0.12)], o); o += 6;
+        const r0 = (SIZES[i + 1] / 2 - 0.45), r1 = (SIZES[i + 1] / 2 - 0.45);
+        const y0 = layers[i].group.position.y + H / 2, y1 = layers[i + 1].group.position.y - H / 2;
+        linkPos.set([cx * r0, y0, cz * r0, cx * r1, y1, cz * r1], o); o += 6;
       }
     });
     linkGeo.attributes.position.needsUpdate = true;
-    links.computeLineDistances();
-    const linkK = Math.max(0, (intro - 0.6) / 0.4);
-    linkMat.opacity = 0.5 * linkK;
-    pulseMat.uniforms.uAlpha.value = 0.95 * linkK;
+    const linkK = ease((intro - 0.65) / 0.35);
+    linkMat.opacity = 0.32 * linkK;
+    pulseMat.uniforms.uAlpha.value = 0.9 * linkK;
 
     const pp = pulseGeo.attributes.position.array;
-    const yBottom = layers[0].group.position.y, yTop = layers[3].group.position.y;
+    const yB = layers[0].group.position.y + H / 2, yT = layers[3].group.position.y - H / 2;
     pulses.forEach((pu, i) => {
       if (!reduce) { pu.t += pu.v * 0.01; if (pu.t > 1) { pu.t = 0; pu.col = Math.floor(Math.random() * COLS.length); } }
-      const [x, z] = COLS[pu.col], s = 1 - pu.t * 0.36;
-      pp[i * 3] = x * s; pp[i * 3 + 1] = yBottom + (yTop - yBottom) * pu.t; pp[i * 3 + 2] = z * s;
+      const [cx, cz] = COLS[pu.col], r = SIZES[1] / 2 - 0.45;
+      pp[i * 3] = cx * r; pp[i * 3 + 1] = yB + (yT - yB) * pu.t; pp[i * 3 + 2] = cz * r;
     });
     pulseGeo.attributes.position.needsUpdate = true;
 
@@ -1469,21 +1510,20 @@ function initHero() {
 
     renderer.render(scene, camera);
 
-    // position HTML labels at each layer's right-hand corner
     if (labels[0] && labels[0].el.offsetParent !== null) {
       const w = canvas.clientWidth, h = canvas.clientHeight;
       labels.forEach(({ el, layer }) => {
         const L = layers[layer];
-        tmp.set(L.size / 2 + 0.15, layer === 3 ? 0.3 : 0, -L.size / 2 + 0.2);
+        tmp.set(L.size / 2, 0, L.size / 2 - 0.3);
         L.group.localToWorld(tmp); tmp.project(camera);
-        el.style.transform = 'translate(' + ((tmp.x * 0.5 + 0.5) * w + 12).toFixed(0) + 'px,' + ((-tmp.y * 0.5 + 0.5) * h - 8).toFixed(0) + 'px)';
-        el.classList.toggle('is-on', intro > 0.85 && p < 0.6);
+        el.style.transform = 'translate(' + ((tmp.x * 0.5 + 0.5) * w + 16).toFixed(0) + 'px,' + ((-tmp.y * 0.5 + 0.5) * h - 8).toFixed(0) + 'px)';
+        el.classList.toggle('is-on', intro > 0.9 && p < 0.6);
       });
     }
   }
 
   resize();
-  if (reduce) frame(0, 0); else runWhileVisible(hero, frame);
+  if (reduce) frame(0); else runWhileVisible(hero, frame);
 }
 
 /* ================= About: connected-systems network ================= */
