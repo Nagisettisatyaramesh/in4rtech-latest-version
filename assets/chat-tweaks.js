@@ -117,12 +117,67 @@
   var GREETING = 'Hi, this is In4rtech Assistant. How can I help you?';
   var GENERIC_GREETING = /^(hi|hello|hey)!?\s*how can i help you( today)?\??$/i;
 
+  /* The chatbot server also indexes the page text, and for short questions ("services", "insights")
+     it sometimes returns the site menu ("ABOUT ABOUT SERVICES SERVICES ...") or a heading fragment
+     instead of a knowledge article. Detect those and re-ask as "Tell me about In4rtech <topic>",
+     which reliably matches the right article. */
+  var MENU_WORDS = /^(about|services?|approach|people|work|insights|contact|menu|close|home|founder|managing|director|&|\u00d7)$/i;
+
+  function isMenuText(text) {
+    var words = text.split(/\s+/).filter(Boolean);
+    if (words.length < 2) return false;
+    var menu = words.filter(function (w) { return MENU_WORDS.test(w); }).length;
+    if (menu / words.length >= 0.6) return true;
+    // Short heading fragment: no sentence punctuation and an all-caps menu word, e.g. "People Founder & Managing Director CONTACT"
+    return words.length <= 12 && !/[.?!]/.test(text) && words.some(function (w) { return w.length > 2 && w === w.toUpperCase() && MENU_WORDS.test(w); });
+  }
+
+  function chatApi() {
+    var s = document.querySelector('script[src*="chatbot.vitalitysoft.com/widget.js"]');
+    if (!s) return null;
+    return {
+      url: new URL(s.src).origin + (s.getAttribute('data-chat-endpoint') || '/api/chat'),
+      websiteId: s.getAttribute('data-website-id')
+    };
+  }
+
+  function topicOf(question) {
+    var t = question.replace(/[?.!]+$/, '').trim()
+      .replace(/^(please\s+)?(tell me about|tell me|give me|show me|what about|what are|what is|list( of)?|info on|information on)\s+/i, '')
+      .replace(/^(your|the|our|in4rtech('s)?)\s+/i, '');
+    return t || question;
+  }
+
+  function showFallback(root, el) {
+    el.textContent = FALLBACK;
+    el.insertAdjacentElement('afterend', handoffButton(root));
+  }
+
+  function retryAnswer(root, el) {
+    var api = chatApi();
+    var prev = el.previousElementSibling;
+    while (prev && !prev.classList.contains('aiwa-msg-user')) prev = prev.previousElementSibling;
+    if (!api || !prev) return showFallback(root, el);
+    el.textContent = '\u2026';
+    fetch(api.url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ websiteId: api.websiteId, message: 'Tell me about In4rtech ' + topicOf(prev.textContent.trim()) })
+    }).then(function (r) { return r.ok ? r.json() : null; }).then(function (j) {
+      var answer = j && j.answer ? String(j.answer).trim() : '';
+      if (!answer || j.humanFallback || FALLBACK_TEXT.test(answer) || isMenuText(answer)) return showFallback(root, el);
+      el.textContent = answer;
+      if (/contact form/i.test(answer)) el.insertAdjacentElement('afterend', handoffButton(root));
+    }).catch(function () { showFallback(root, el); });
+  }
+
   function rewordBubbles(root, list) {
     var bubbles = list.querySelectorAll('.aiwa-msg-bot:not([data-in4]), .aiwa-msg-error:not([data-in4])');
     for (var i = 0; i < bubbles.length; i++) {
       var el = bubbles[i], text = el.textContent.trim();
       el.setAttribute('data-in4', '');
       if (GENERIC_GREETING.test(text)) { el.textContent = GREETING; continue; }
+      if (isMenuText(text)) { retryAnswer(root, el); continue; }
       var fallback = FALLBACK_TEXT.test(text);
       if (fallback) { el.textContent = FALLBACK; el.className = 'aiwa-msg aiwa-msg-bot'; el.setAttribute('data-in4', ''); }
       // Offer the contact form after fallbacks and after any answer that points to it
